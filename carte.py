@@ -14,7 +14,8 @@ def creer_carte(v:int, s:int) -> tuple:
         >>> creer_carte(7, 3)
         Carte(valeur='As', symbole='♣')
     """
-    pass
+    
+    return CARTE(VALEURS[v], SYMBOLES[s])
 
 def comparer_carte(c1:"CARTE", c2:"CARTE") -> int:
     """
@@ -31,7 +32,16 @@ def comparer_carte(c1:"CARTE", c2:"CARTE") -> int:
         >>> comparer_carte(creer_carte(5, 2), creer_carte(5, 1))
         0
     """
-    pass
+    ind1 = VALEURS.index(c1.valeur)
+    ind2 = VALEURS.index(c2.valeur)
+    
+    if ind1 < ind2 :
+        res = 1
+    elif ind1 > ind2 :
+        res = -1
+    else :
+        res = 0
+    return res
 
 def afficher_carte(c:"CARTE") -> str:
     """

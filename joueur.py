@@ -15,7 +15,9 @@ def creer_joueur(nom:str) -> "JOUEUR":
         >>> est_vide(j.gain)
         True
     """
-    pass
+    main = creer_pile()
+    gain = creer_pile()
+    return JOUEUR(nom, main, gain) 
 
 def perdu(joueur:"JOUEUR") -> bool:
     """

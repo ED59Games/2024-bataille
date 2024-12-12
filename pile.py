@@ -6,7 +6,7 @@ def creer_pile() -> list:
         >>> creer_pile()
         []
     """
-    pass
+    return []
 
 def est_vide(p:"pile") -> bool:
     """
@@ -17,7 +17,7 @@ def est_vide(p:"pile") -> bool:
         >>> est_vide(p)
         True
     """
-    pass
+    return p == []
 
 def empiler(p:"pile", v:"ELT") -> None:
     """
@@ -29,7 +29,7 @@ def empiler(p:"pile", v:"ELT") -> None:
         >>> est_vide(p)
         False
     """
-    pass
+    p.append(v)
     
 def depiler(p:"pile") -> "ELT":
     """
@@ -43,7 +43,9 @@ def depiler(p:"pile") -> "ELT":
         >>> est_vide(p)
         True
     """
-    pass
+    if not est_vide(p):
+        res = p.pop()
+    return res
     
 if __name__ == '__main__':
     import doctest
